@@ -1,7 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ViewController } from './view.controller';
+import { UsersModule } from '../users/users.module';
 
 @Module({
-  controllers: [ViewController]
+  imports: [UsersModule],
+  controllers: [ViewController],
 })
 export class ViewModule {}
